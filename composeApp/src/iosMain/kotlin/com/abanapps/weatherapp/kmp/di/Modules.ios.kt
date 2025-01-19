@@ -12,4 +12,8 @@ actual val platformModule: Module
             Darwin.create()
         }
 
+        single {
+
+        }
+
     }

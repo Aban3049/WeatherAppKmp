@@ -1,5 +1,4 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -57,6 +56,15 @@ kotlin {
             implementation(libs.bundles.ktor)
             implementation(compose.components.resources)
             implementation(libs.jetbrains.compose.navigation)
+
+            implementation(libs.compass.permissions.mobile)
+            implementation(libs.compass.geolocation.mobile)
+            implementation(libs.compass.autocomplete)
+            implementation(libs.compass.autocomplete.mobile)
+            implementation(libs.compass.geolocation)
+            implementation(libs.compass.geocoder)
+            implementation(libs.compass.geocoder.mobile)
+
 
         }
 
