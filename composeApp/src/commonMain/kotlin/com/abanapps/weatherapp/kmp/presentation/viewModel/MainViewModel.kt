@@ -12,7 +12,8 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val repo: Repo,
-) : ViewModel() {
+) : ViewModel()
+{
 
     private val _state = MutableStateFlow<States>(States.isLoading)
     val state = _state.asStateFlow()

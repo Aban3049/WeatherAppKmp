@@ -19,7 +19,7 @@ class RepoImpl(
     ): Result<WeatherResponse, DataError> {
 
         return safeCall {
-            httpClient.get("https://api.openweathermap.org/data/2.5/weather?/l≈at=$lat&lon=$log&appid=$API_KEY&units=metric")
+            httpClient.get("https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$log&appid=$API_KEY&units=metric")
         }
 
     }
