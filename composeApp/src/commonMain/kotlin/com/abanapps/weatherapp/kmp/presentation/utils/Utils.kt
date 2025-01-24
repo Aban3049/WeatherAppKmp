@@ -1,13 +1,15 @@
 package com.abanapps.weatherapp.kmp.presentation.utils
 
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import weatherappkmp.composeapp.generated.resources.Overpass_Bold
-import weatherappkmp.composeapp.generated.resources.Res
+import kotlinx.datetime.Instant
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
 
 object Utils {
 
-
+    fun convertLongToDateString(timestamp: Long): String {
+        val instant = Instant.fromEpochMilliseconds(timestamp)
+        val datetime = instant.toLocalDateTime(TimeZone.currentSystemDefault())
+        return datetime.toString()
+    }
 
 }

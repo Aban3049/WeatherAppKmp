@@ -65,6 +65,8 @@ kotlin {
             implementation(libs.compass.geocoder)
             implementation(libs.compass.geocoder.mobile)
 
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
+
 
         }
 

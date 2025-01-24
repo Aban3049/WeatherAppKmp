@@ -58,7 +58,7 @@ fun SplashScreen(navController: NavController,modifier: Modifier = Modifier,) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .weight(1f)
+                    .weight(2f)
                     .padding(horizontal = 30.dp),
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {

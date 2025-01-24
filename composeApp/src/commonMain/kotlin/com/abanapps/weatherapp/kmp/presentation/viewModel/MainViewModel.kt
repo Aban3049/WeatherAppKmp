@@ -15,20 +15,20 @@ class MainViewModel(
 ) : ViewModel()
 {
 
-    private val _state = MutableStateFlow<States>(States.isLoading)
+    private val _state = MutableStateFlow<States>(States.IsLoading)
     val state = _state.asStateFlow()
 
     fun getWeather(lat: Double, log: Double) {
 
 
-        _state.value = States.isLoading
+        _state.value = States.IsLoading
 
         viewModelScope.launch {
 
             repo.getWeather(lat = lat, log = log).onSuccess {
-                _state.value = States.onSuccess(weatherResponse = it)
+                _state.value = States.OnSuccess(weatherResponse = it)
             }.onError {
-                _state.value = States.onError(it.toString())
+                _state.value = States.OnError(it.toString())
             }
 
         }
